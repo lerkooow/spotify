@@ -1,0 +1,67 @@
+.wrapper {
+    background-color: #000;
+    height: 100vh;
+}
+
+.signup {
+    display: grid;
+    color: #fff;
+    background-color: #b3a4a44c;
+    border-radius: 10px;
+    justify-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+
+    .title_signup {
+        font-size: 40px;
+        margin: 40px 0;
+    }
+
+    .input_name, .input_email {
+        width: 100%;
+        max-width: 361px;
+        margin-bottom: 29px;
+        border-radius: 4px;
+        background-color: #fff;
+
+        @media (max-width: 375px) {
+            width: 90%;
+        }
+    }
+
+    .input_age {
+        width: 100%;
+        max-width: 361px;
+        margin-bottom: 29px;
+        border-radius: 4px;
+        background-color: #fff;
+        margin-top: 30px;
+
+        @media (max-width: 375px) {
+            width: 90%;
+        }
+    }
+
+    .return_home {
+        color: #3333A3;
+        margin: 29px 650px 0 0;
+        text-decoration: none;
+
+        &:hover {
+            color: #4d4df7;
+        }
+    }
+
+    .return_login {
+        color: #3333A3;
+        margin-bottom: 29px;
+        text-decoration: none;
+
+        &:hover {
+            color: #4d4df7;
+        }
+    }
+}

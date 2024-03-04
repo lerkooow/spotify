@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.App {
+    display: grid;
+    grid-template-columns: 0.32fr 1fr 0.32fr;
+}
+
+body {
+    --nav: #000;
+    --item: 255,255,255;
+    --nav-item: #fff;
+    --top: #B3B3B3;
+    --hr: #282828;
+    color-scheme: dark;
+}

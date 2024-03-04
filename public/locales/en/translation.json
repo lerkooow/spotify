@@ -1,0 +1,10 @@
+{
+  "navigation": {
+    "home": "Home",
+    "search": "Search",
+    "your library": "Your Library",
+    "": "",
+    "create playlist": "Create Playlist",
+    "liked song": "Liked Song"
+  }
+}

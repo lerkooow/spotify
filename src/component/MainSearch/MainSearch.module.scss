@@ -1,0 +1,85 @@
+.main_dark {
+    background: #000;
+
+}
+
+.wrapper {
+    margin: 0 40px 30px 40px;
+}
+
+.title_searches h1 {
+    color: #fff;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.items_artist {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    gap: 20px;
+
+    .card_artist {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 324px;
+        width: 224px;
+        background-color:#ffffff14;
+        border-radius: 6px;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    .close_artist {
+        color: #fff;
+        width: 32px;
+        height: 32px;
+        margin-left: 150px;
+    }
+
+    .artist_img {
+        width: 182px;
+        height: 182px;
+        border-radius: 100px;
+        margin-bottom: 25px;
+    }
+
+    .artist_name {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .artist_function {
+        color: #B3B3B3;
+        font-size: 18px;
+    }
+}
+
+.title_genres h2 {
+    color: #fff;
+    font-size: 32px;
+    margin: 55px 0 20px 0;
+}
+
+.slider {
+    display: flex;
+    gap: 30px;
+
+    .img_slider {
+        width: 478px;
+        height: 270px;
+    }
+}
+
+.browse_items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 31px;
+
+    .browse_img {
+        width: 224px;
+        height: 224px;
+    }
+}
