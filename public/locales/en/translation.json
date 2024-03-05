@@ -1,4 +1,7 @@
 {
+  "greeting": {
+    "goodAfternoon": "Good afternoon"
+  },
   "navigation": {
     "home": "Home",
     "search": "Search",
@@ -6,5 +9,43 @@
     "": "",
     "create playlist": "Create Playlist",
     "liked song": "Liked Song"
+  },
+  "top": {
+    "Chill Mix": "Chill Mix",
+    "Insta Hits": "Insta Hits",
+    "Your Top Songs 2021": "Your Top Songs 2021",
+    "Mellow Songs": "Mellow Songs",
+    "Happy Hits!": "Happy Hits!",
+    "Deep Focus": "Deep Focus",
+    "Instrumental Study": "Instrumental Study",
+    "OST Compilations": "OST Compilations",
+    "Mixed Feelings": "Mixed Feelings"
+  },
+  "login": {
+    "LogIn": "Log In"
+  },
+  "signup": {
+    "SignUp": "Sign Up"
+  },
+  "mix": {
+    "Chill Mix": "Chill Mix",
+    "Daily Mix 1": "Daily Mix 1",
+    "Daily Mix 2": "Daily Mix 2",
+    "Pop Mix": "Pop Mix",
+    "Daily Mix 5": "Daily Mix 5",
+    "Daily Mix 4": "Daily Mix 4",
+    "Your top mixes": "Your top mixes",
+    "Made for you": "Made for you",
+    "Recently played": "Recently played",
+    "Jump back in": "Jump back in",
+    "Uniquely yours": "Uniquely yours",
+    "Just the hits": "Just the hits",
+    "SeeAll": "SEE ALL"
+  },
+  "friend": {
+    "friendTitle": "Friend Activity",
+    "friendDescr": "Let friends and followers on Spotify see what you’re listening to.",
+    "friendSett": "Go to Settings > Social and enable “Share my...’ You can turn this off at any time.",
+    "friendButton": "SETTINGS"
   }
 }

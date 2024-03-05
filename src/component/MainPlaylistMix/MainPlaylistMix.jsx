@@ -1,25 +1,55 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { FaPlayCircle, FaSortDown } from 'react-icons/fa';
 import { CiHeart, CiSaveDown1, CiSearch } from 'react-icons/ci';
 import { HiOutlineDotsHorizontal } from 'react-icons/hi';
 import { HiOutlineClock } from 'react-icons/hi2';
+import { IoMdHeart, IoMdHeartEmpty } from 'react-icons/io';
+import { itemsMusic } from '../Music/Music';
 import elipse from '../../img/Ellipse 19.png';
 import avatarLiked from '../../img/Screenshot 2022-06-05 at 12.21 1.png';
-import likedImg from '../../img/Screenshot 2022-06-04 at 20 1.png';
 import HeaderMain from '../HeaderMain/HeaderMain';
-import styles from './MainLiked.module.scss';
-import { itemsMusic } from '../Music/Music';
+import styles from './MainPlaylistMix.module.scss';
 
-function MainLiked() {
+const getBackgroundColor = (title) => {
+  switch (title) {
+    case 'Chill Mix':
+      return '#DEF628';
+    case 'Pop Mix':
+      return '#A34284';
+    case 'Daily Mix 1':
+      return '#A1DAD0';
+    case 'Daily Mix 5':
+      return '#EEC677';
+    case 'Folk & Acoustic Mix':
+      return '#C9338C';
+    case 'Daily Mix 4':
+      return '#D87794';
+    default:
+      return '#604EC1';
+  }
+};
+
+function MainPlaylistMix({ title, mix }) {
+  const backgroundColor = getBackgroundColor(title);
   return (
-    <div className={styles.liked_main}>
+    <div className={styles.liked_main} style={{ background: `linear-gradient(${backgroundColor}, #000)` }}>
       <div className={styles.wrapper}>
         <HeaderMain />
         <div className={styles.liked_song}>
-          <img className={styles.liked_img} src={likedImg} alt="liked_img" />
+          {mix.map((item) => (
+            item.title === title ? (
+              <img className={styles.liked_img} src={item.img} alt="liked_img" />
+            ) : null
+          ))}
           <div className={styles.liked_info}>
             <p className={styles.liked_public}>PUBLIC PLAYLIST</p>
-            <p className={styles.liked_text}>Liked Songs</p>
+            <p className={styles.liked_text}>{title}</p>
+            {mix.map((item) => (
+              item.title === title ? (
+                <p className={styles.liked_description}>{item.description}</p>
+              ) : null
+            ))}
             <div className={styles.avatar_liked}>
               <img className={styles.img_liked} src={avatarLiked} alt="avatar-liked" />
               <p className={styles.name_liked}>lerkooow</p>
@@ -64,7 +94,10 @@ function MainLiked() {
               </div>
               <p className={styles.item_music_album}>{item.album}</p>
               <p className={styles.item_music_date}>{item.date_added}</p>
-              <p className={styles.item_music_time}>{item.time}</p>
+              <p className={styles.item_music_time}>
+                {item.liked ? <IoMdHeart style={{ color: '#63CF6C' }} /> : <IoMdHeartEmpty />}
+                {item.time}
+              </p>
             </div>
           ))}
         </div>
@@ -73,4 +106,4 @@ function MainLiked() {
   );
 }
 
-export default MainLiked;
+export default MainPlaylistMix;

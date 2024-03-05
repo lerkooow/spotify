@@ -13,6 +13,12 @@
     grid-template-columns: 0.32fr 1fr 0.32fr;
 }
 
+.App_close {
+    display: grid;
+    grid-template-columns: 0.17fr 1fr;
+}
+
+
 body {
     --nav: #000;
     --item: 255,255,255;

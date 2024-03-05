@@ -1,19 +1,19 @@
-import styles from "./Playlist.module.scss";
+import styles from "./PlaylistMix.module.scss";
 import FriendActivity from "../../FriendActivity/FriendActivity";
 import Navigation from "../../Navigation/Navigation";
 import { useParams } from "react-router-dom";
-import MainPlaylist from "../../MainPlaylist/MainPlaylist";
+import MainPlaylistMix from "../../MainPlaylistMix/MainPlaylistMix";
 
-const Playlist = ({ top, navigation, mix }) => {
+const PlaylistMix = ({ top, navigation, mix }) => {
     const { title } = useParams();
 
     return (
         <div className={styles.liked}>
             <Navigation top={top} navigation={navigation} />
-            <MainPlaylist title={title} mix={mix} />
+            <MainPlaylistMix title={title} mix={mix} />
             <FriendActivity />
         </div>
     )
 }
 
-export default Playlist;
+export default PlaylistMix;

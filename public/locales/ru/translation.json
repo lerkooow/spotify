@@ -1,9 +1,50 @@
 {
+  "greeting": {
+    "goodAfternoon": "Добрый день"
+  },
   "navigation": {
     "home": "Домашняя страница",
     "search": "Поиск",
     "your library": "Твоя библиотека",
     "create playlist": "Создать плейлист",
     "liked song": "Понравившиеся треки"
+  },
+  "top": {
+    "Chill Mix": "Чилл Микс",
+    "Insta Hits": "Инста-хиты",
+    "Your Top Songs 2021": "Ваши лучшие песни 2021 года",
+    "Mellow Songs": "Мелодичные песни",
+    "Happy Hits!": "Веселые хиты!",
+    "Deep Focus": "Глубокий фокус",
+    "Instrumental Study": "Инструментальное исследование",
+    "OST Compilations": "ОСТ-Сборник",
+    "Mixed Feelings": "Микс чувств"
+  },
+  "login": {
+    "LogIn": "Авторизация"
+  },
+  "signup": {
+    "SignUp": "Регистрация"
+  },
+  "mix": {
+    "Chill Mix": "Чилл Микс",
+    "Daily Mix 1": "Ежедневный микс 1",
+    "Daily Mix 2": "Ежедневный микс 2",
+    "Pop Mix": "Поп-микс",
+    "Daily Mix 5": "Ежедневный микс 5",
+    "Daily Mix 4": "Ежедневный микс 4",
+    "Your top mixes": "Ваши лучшие миксы",
+    "Made for you": "Сделано для вас",
+    "Recently played": "Играло недавно",
+    "Jump back in": "Вернуться в",
+    "Uniquely yours": "Только ваше",
+    "Just the hits": "Только хиты",
+    "SeeAll": "УВИДЕТЬ ВСЕ"
+  },
+  "friend": {
+    "friendTitle": "Действия друзей",
+    "friendDescr": "Позвольте друзьям и подписчикам Spotify видеть, что вы слушаете.",
+    "friendSett": "Перейдите в «Настройки» > «Социальные сети» и включите «Поделиться...». Эту функцию можно отключить в любой момент.",
+    "friendButton": "НАСТРОЙКИ"
   }
 }
