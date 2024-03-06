@@ -8,7 +8,7 @@
     "your library": "Your Library",
     "": "",
     "create playlist": "Create Playlist",
-    "liked song": "Liked Song"
+    "liked songs": "Liked Songs"
   },
   "top": {
     "Chill Mix": "Chill Mix",
@@ -26,6 +26,38 @@
   },
   "signup": {
     "SignUp": "Sign Up"
+  },
+  "playlist": {
+    "playlist": "Playlist",
+    "numberLikedSong": "34 liked songs",
+    "Happy Hits!": "Happy Hits!",
+    "Hits to boost your mood and fill you wi...": "Hits to boost your mood and fill you wi...",
+    "Anime Lofi & Ch...": "Anime Lofi & Ch...",
+    "Experience the best Anime moments...": "Experience the best Anime moments...",
+    "Afro “Select” Vi...": "Afro “Select” Vi...",
+    "A compilation of hit African songs I cons...": "A compilation of hit African songs I cons...",
+    "Instrumental St...": "Instrumental St...",
+    "A soft musical backdrop for your st...": "A soft musical backdrop for your st...",
+    "Pop Mix": "Pop Mix",
+    "Hey Violet, VÉRITÉ, Timeflies and more": "Hey Violet, VÉRITÉ, Timeflies and more",
+    "Chill Mix": "Chill Mix",
+    "Julia Wolf, Khalid, ayokay and more": "Julia Wolf, Khalid, ayokay and more"
+  },
+  "likedSongs": {
+    "likedSongs": "Liked Songs",
+    "public": "PUBLIC PLAYLIST",
+    "number": "34 songs",
+    "title": "# TITLE",
+    "album": "ALBUM",
+    "date": "DATE ADDED",
+    "sort": "Sort"
+  },
+  "searches": {
+    "recentSearches": "Recent searches",
+    "yourTopGenres": "Your top genres",
+    "browseAll": "Browse all",
+    "searchInput": "Artists, songs, or podcasts",
+    "artist": "Artist"
   },
   "mix": {
     "Chill Mix": "Chill Mix",

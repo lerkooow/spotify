@@ -5,6 +5,7 @@ import { CiHeart, CiSaveDown1, CiSearch } from 'react-icons/ci';
 import { HiOutlineDotsHorizontal } from 'react-icons/hi';
 import { HiOutlineClock } from 'react-icons/hi2';
 import { IoMdHeart, IoMdHeartEmpty } from 'react-icons/io';
+import { useTranslation } from 'react-i18next';
 import { itemsMusic } from '../Music/Music';
 import elipse from '../../img/Ellipse 19.png';
 import avatarLiked from '../../img/Screenshot 2022-06-05 at 12.21 1.png';
@@ -30,12 +31,21 @@ const getBackgroundColor = (title) => {
   }
 };
 
-function MainPlaylistLibrary({ title, playlists }) {
+function MainPlaylistLibrary({
+  title, playlists, switches, handleSwitchChange, open, toggleOpen,
+}) {
   const backgroundColor = getBackgroundColor(title);
+  const { t } = useTranslation();
+
   return (
     <div className={styles.liked_main} style={{ background: `linear-gradient(${backgroundColor}, #000)` }}>
       <div className={styles.wrapper}>
-        <HeaderMain />
+        <HeaderMain
+          switches={switches}
+          handleSwitchChange={handleSwitchChange}
+          open={open}
+          toggleOpen={toggleOpen}
+        />
         <div className={styles.liked_song}>
           {playlists.map((item) => (
             item.title === title ? (
@@ -43,18 +53,18 @@ function MainPlaylistLibrary({ title, playlists }) {
             ) : null
           ))}
           <div className={styles.liked_info}>
-            <p className={styles.liked_public}>PUBLIC PLAYLIST</p>
-            <p className={styles.liked_text}>{title}</p>
+            <p className={styles.liked_public}>{t('likedSongs.public')}</p>
+            <p className={styles.liked_text}>{t(`playlist.${title}`)}</p>
             {playlists.map((item) => (
               item.title === title ? (
-                <p className={styles.liked_description}>{item.description}</p>
+                <p className={styles.liked_description}>{t(`playlist.${item.description}`)}</p>
               ) : null
             ))}
             <div className={styles.avatar_liked}>
               <img className={styles.img_liked} src={avatarLiked} alt="avatar-liked" />
               <p className={styles.name_liked}>lerkooow</p>
               <img className={styles.img_elipse} src={elipse} alt="elipse" />
-              <p className={styles.liked_number}>34 songs</p>
+              <p className={styles.liked_number}>{t('likedSongs.number')}</p>
             </div>
           </div>
         </div>
@@ -70,16 +80,16 @@ function MainPlaylistLibrary({ title, playlists }) {
             </div>
             <div className={styles.menu_search}>
               <CiSearch className={styles.search} />
-              <p className={styles.select_liked}>Custom order</p>
+              <p className={styles.select_liked}>{t('likedSongs.sort')}</p>
               <FaSortDown className={styles.sort_down} />
             </div>
           </div>
         </div>
         <div className={styles.wrapper}>
           <div className={styles.title_items_music}>
-            <p className={styles.at_title}># TITLE</p>
-            <p className={styles.music_album}>ALBUM</p>
-            <p className={styles.music_date}>DATE ADDED</p>
+            <p className={styles.at_title}>{t('likedSongs.title')}</p>
+            <p className={styles.music_album}>{t('likedSongs.album')}</p>
+            <p className={styles.music_date}>{t('likedSongs.date')}</p>
             <HiOutlineClock className={styles.clock} />
           </div>
           <hr />

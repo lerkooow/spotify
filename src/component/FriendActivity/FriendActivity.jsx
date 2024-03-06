@@ -5,65 +5,112 @@ import { IoMdClose } from 'react-icons/io';
 import { RxAvatar } from 'react-icons/rx';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Box } from '@mui/system';
-import { Button, Skeleton } from '@mui/material';
+import {
+  Button, Paper, Skeleton, Typography,
+} from '@mui/material';
 
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '@emotion/react';
 import styles from './FriendActivity.module.scss';
 
-function FriendActivity({ toggleOpen }) {
+function FriendActivity({ toggleOpen, switches }) {
   const { t } = useTranslation();
+  const theme = useTheme();
+
+  const skeletonOne = switches === 'dark' ? styles.skeleton_one_dark : styles.skeleton_one_light;
+  const skeleton = switches === 'dark' ? styles.skeleton_dark : styles.skeleton_light;
 
   return (
-    <div className={styles.friend}>
+    <Paper sx={{ color: theme.palette.background.paper }} className={styles.friend}>
       <div className={styles.wrapper}>
         <div className={styles.friend_header}>
-          <p className={styles.title_friend}>{t('friend.friendTitle')}</p>
+          <Typography
+            sx={{
+              color: theme.palette.text.secondary,
+              fontSize: '20px',
+              marginTop: '20px',
+            }}
+            className={styles.title_friend}
+          >
+            {t('friend.friendTitle')}
+          </Typography>
           <div className={styles.icons_friend}>
             <Button sx={{ borderRadius: '50px' }}>
-              <PiUserCirclePlusThin className={styles.icon_friend} />
+              {switches === 'dark' ? (
+                <PiUserCirclePlusThin className={styles.icon_friend} />
+              ) : (
+                <PiUserCirclePlusThin style={{ color: 'black' }} className={styles.icon_friend} />
+              )}
             </Button>
             <Button sx={{ borderRadius: '50px' }} onClick={toggleOpen}>
-              <IoMdClose className={styles.icon_close} />
+              {switches === 'dark' ? (
+                <IoMdClose className={styles.icon_close} />
+              ) : (
+                <IoMdClose style={{ color: 'black' }} className={styles.icon_close} />
+              )}
             </Button>
           </div>
         </div>
         <div>
-          <p className={styles.friend_description}>
+          <Typography
+            sx={{
+              color: theme.palette.text.secondary,
+              fontSize: '18px',
+              margin: '40px 0',
+            }}
+          >
             {t('friend.friendDescr')}
-          </p>
+          </Typography>
           <div className={styles.avatar_skeleton}>
             <div className={styles.box}>
-              <RxAvatar className={styles.avatar} />
+              {switches === 'dark' ? (
+                <RxAvatar className={styles.avatar} />
+              ) : (
+                <RxAvatar style={{ color: 'black' }} className={styles.avatar} />
+              )}
               <Box>
-                <Skeleton className={styles.skeleton_one} />
-                <Skeleton className={styles.skeleton_two} animation="wave" />
-                <Skeleton className={styles.skeleton_three} animation={false} />
+                <Skeleton className={skeletonOne} />
+                <Skeleton className={skeleton} animation="wave" />
+                <Skeleton className={skeleton} animation={false} />
               </Box>
             </div>
             <div className={styles.box}>
-              <RxAvatar className={styles.avatar} />
+              {switches === 'dark' ? (
+                <RxAvatar className={styles.avatar} />
+              ) : (
+                <RxAvatar style={{ color: 'black' }} className={styles.avatar} />
+              )}
               <Box>
-                <Skeleton className={styles.skeleton_one} />
-                <Skeleton className={styles.skeleton_two} animation="wave" />
-                <Skeleton className={styles.skeleton_three} animation={false} />
+                <Skeleton className={skeletonOne} />
+                <Skeleton className={skeleton} animation="wave" />
+                <Skeleton className={skeleton} animation={false} />
               </Box>
             </div>
             <div className={styles.box}>
-              <RxAvatar className={styles.avatar} />
+              {switches === 'dark' ? (
+                <RxAvatar className={styles.avatar} />
+              ) : (
+                <RxAvatar style={{ color: 'black' }} className={styles.avatar} />
+              )}
               <Box>
-                <Skeleton className={styles.skeleton_one} />
-                <Skeleton className={styles.skeleton_two} animation="wave" />
-                <Skeleton className={styles.skeleton_three} animation={false} />
+                <Skeleton className={skeletonOne} />
+                <Skeleton className={skeleton} animation="wave" />
+                <Skeleton className={skeleton} animation={false} />
               </Box>
             </div>
           </div>
-          <p className={styles.friend_description}>
+          <Typography sx={{
+            color: theme.palette.text.secondary,
+            fontSize: '18px',
+            margin: '40px 0',
+          }}
+          >
             {t('friend.friendSett')}
-          </p>
+          </Typography>
           <Button sx={{
             display: 'grid',
-            backgroundColor: '#fff',
-            color: '#000',
+            paddingTop: '10px',
+            background: theme.palette.action.hover,
             borderRadius: '40px',
             width: '233px',
             height: '62px',
@@ -71,13 +118,13 @@ function FriendActivity({ toggleOpen }) {
             margin: '0 auto',
           }}
           >
-            <p>
+            <Typography sx={{ color: theme.palette.text.primary }}>
               {t('friend.friendButton')}
-            </p>
+            </Typography>
           </Button>
         </div>
       </div>
-    </div>
+    </Paper>
   );
 }
 

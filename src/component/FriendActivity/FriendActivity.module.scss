@@ -1,44 +1,28 @@
-.friend {
-    background-color: #000;
-
-    .wrapper {
-        margin: 10px 20px;
-    }
-
-    .friend_header {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .title_friend {
-        color: #CCCCCC;
-        font-size: 20px;
-        margin-top: 20px;
-    }
-
-    .icons_friend {
-        display: flex;
-    }
-
-    .icon_friend {
-        width: 40px;
-        height: 40px;
-        margin: 10px;
-        color: #fff;
-    }
-
-    .icon_close {
-        width: 40px;
-        height: 40px;
-        margin: 10px;
-        color: #fff;
-    }
+.wrapper {
+    margin: 10px 20px;
 }
 
-.friend_description {
-    color: #CCCCCC;
-    font-size: 18px;
-    margin: 40px 0;
+.friend_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons_friend {
+    display: flex;
+}
+
+.icon_friend {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    color: #fff;
+}
+
+.icon_close {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    color: #fff;
 }
 
 .avatar_skeleton {
@@ -56,17 +40,32 @@
         height: 62px;
     }
 
-    .skeleton_one  {
+    .skeleton_one_dark  {
         background-color:#ffffff4c;
         border-radius: 10px;
         margin: 7px;
         width: 102px;
         height: 10px;
-
     }
 
-    .skeleton_two, .skeleton_three {
+    .skeleton_one_light  {
+        background-color:#0000004c;
+        border-radius: 10px;
+        margin: 7px;
+        width: 102px;
+        height: 10px;
+    }
+
+    .skeleton_dark {
         background-color:#ffffff4c;
+        border-radius: 10px;
+        margin: 7px;
+        width: 79px;
+        height: 10px;
+    }
+
+    .skeleton_light {
+        background-color:#0000004c;
         border-radius: 10px;
         margin: 7px;
         width: 79px;

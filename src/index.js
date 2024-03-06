@@ -38,19 +38,19 @@ const navigation = [
   {
     title: 'Home',
     icon_dark: <GoHomeFill style={{ color: 'white', width: '32px', height: '32px' }} />,
-    icon_light: <GoHomeFill />,
+    icon_light: <GoHomeFill style={{ color: 'black', width: '32px', height: '32px' }} />,
     routes: '/',
   },
   {
     title: 'Search',
     icon_dark: <CiSearch style={{ color: 'white', width: '32px', height: '32px' }} />,
-    icon_light: <CiSearch />,
+    icon_light: <CiSearch style={{ color: 'black', width: '32px', height: '32px' }} />,
     routes: '/search',
   },
   {
     title: 'Your Library',
     icon_dark: <VscLibrary style={{ color: 'white', width: '32px', height: '32px' }} />,
-    icon_light: <VscLibrary />,
+    icon_light: <VscLibrary style={{ color: 'black', width: '32px', height: '32px' }} />,
     routes: '/your_library',
   },
   {
@@ -60,13 +60,13 @@ const navigation = [
   {
     title: 'Create Playlist',
     icon_dark: <BiAddToQueue style={{ color: 'white', width: '32px', height: '32px' }} />,
-    icon_light: <BiAddToQueue />,
+    icon_light: <BiAddToQueue style={{ color: 'black', width: '32px', height: '32px' }} />,
   },
   {
-    title: 'Liked Song',
+    title: 'Liked Songs',
     icon_dark: <BiSolidHeartSquare style={{ color: 'white', width: '32px', height: '32px' }} />,
-    icon_light: <BiSolidHeartSquare />,
-    routes: '/liked_song',
+    icon_light: <BiSolidHeartSquare style={{ color: 'black', width: '32px', height: '32px' }} />,
+    routes: '/liked_songs',
   },
 ];
 
@@ -132,7 +132,7 @@ const playlists = [
     id: 'anime-lofi',
     img: playlist6,
     title: 'Anime Lofi & Ch...',
-    description: 'Experience the best Anime moments aga...',
+    description: 'Experience the best Anime moments...',
   },
   {
     id: 'afro',
@@ -174,7 +174,7 @@ const router = createBrowserRouter([
     element: <Library top={top} navigation={navigation} playlists={playlists} />,
   },
   {
-    path: '/liked_song',
+    path: '/liked_songs',
     element: <LikedSong top={top} navigation={navigation} />,
   },
   {

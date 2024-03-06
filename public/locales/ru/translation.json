@@ -7,7 +7,7 @@
     "search": "Поиск",
     "your library": "Твоя библиотека",
     "create playlist": "Создать плейлист",
-    "liked song": "Понравившиеся треки"
+    "liked songs": "Понравившиеся треки"
   },
   "top": {
     "Chill Mix": "Чилл Микс",
@@ -25,6 +25,38 @@
   },
   "signup": {
     "SignUp": "Регистрация"
+  },
+  "playlist": {
+    "playlist": "Плейлист",
+    "numberLikedSong": "34 понравившихся трека",
+    "Happy Hits!": "Счастливые хиты!",
+    "Hits to boost your mood and fill you wi...": "Хиты, которые поднимут настроение и наполнят энергией...",
+    "Anime Lofi & Ch...": "Аниме Лофи и Ч...",
+    "Experience the best Anime moments...": "Переживите лучшие моменты аниме...",
+    "Afro “Select” Vi...": "Афро «Выбор» Ви...",
+    "A compilation of hit African songs I cons...": "Сборник хитовых африканских песен, которые я...",
+    "Instrumental St...": "Инструментальная иссл...",
+    "A soft musical backdrop for your st...": "Мягкий музыкальный фон для вашего...",
+    "Pop Mix": "Поп-микс",
+    "Hey Violet, VÉRITÉ, Timeflies and more": "Hey Violet, VÉRITÉ, Timeflies и другие",
+    "Chill Mix": "Чилл Микс",
+    "Julia Wolf, Khalid, ayokay and more": "Julia Wolf, Khalid, ayokay и другие"
+  },
+  "likedSongs": {
+    "likedSongs": "Понравившиеся треки",
+    "public": "ПУБЛИЧНЫЙ ПЛЕЙЛИСТ",
+    "number": "34 трека",
+    "title": "# НАЗВАНИЕ",
+    "album": "АЛЬБОМ",
+    "date": "ДАТА ДОБАВЛЕНИЯ",
+    "sort": "Сортировка"
+  },
+  "searches": {
+    "recentSearches": "Недавние поиски",
+    "yourTopGenres": "Ваши лучшие жанры",
+    "browseAll": "Просмотреть все",
+    "searchInput": "Исполнители, песни или подкасты",
+    "artist": "Исполнитель"
   },
   "mix": {
     "Chill Mix": "Чилл Микс",

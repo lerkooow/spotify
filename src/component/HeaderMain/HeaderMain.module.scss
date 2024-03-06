@@ -4,7 +4,6 @@
     grid-template-columns: repeat(2, 1fr);
 
     .signup {
-        color: #A7A7A7;
         text-decoration:none;
     }
 
@@ -16,6 +15,7 @@
         color: #000;
         text-decoration:none;
         padding: 10px;
+        min-width: 80px;
     }
 }
 
@@ -25,12 +25,6 @@
     gap: 20px;
     margin: 20px 0;
     align-items: center;
-}
-
-.arrow {
-    width: 40px;
-    height: 40px;
-    color: white;
 }
 
 .auth_panel {

@@ -1,16 +1,13 @@
 .main_dark {
-    background: #000;
+    background: #2c2a2a;
+}
 
+.main_light {
+    background: #d3d5d5;
 }
 
 .wrapper {
     margin: 0 40px 30px 40px;
-}
-
-.title_searches h1 {
-    color: #fff;
-    font-size: 32px;
-    margin-top: 20px;
 }
 
 .items_artist {
@@ -25,17 +22,10 @@
         justify-content: center;
         height: 324px;
         width: 224px;
-        background-color:#ffffff14;
+        background-color: #ffffff2e;
         border-radius: 6px;
         font-size: 20px;
         padding: 0 20px;
-    }
-
-    .close_artist {
-        color: #fff;
-        width: 32px;
-        height: 32px;
-        margin-left: 150px;
     }
 
     .artist_img {
@@ -44,22 +34,6 @@
         border-radius: 100px;
         margin-bottom: 25px;
     }
-
-    .artist_name {
-        color: #fff;
-        font-size: 20px;
-    }
-
-    .artist_function {
-        color: #B3B3B3;
-        font-size: 18px;
-    }
-}
-
-.title_genres h2 {
-    color: #fff;
-    font-size: 32px;
-    margin: 55px 0 20px 0;
 }
 
 .slider {
@@ -77,6 +51,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 31px;
+    justify-content: space-between;
 
     .browse_img {
         width: 224px;

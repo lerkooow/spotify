@@ -3,10 +3,14 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { MdOutlineLanguage } from 'react-icons/md';
+import {
+  Paper, Typography, useTheme,
+} from '@mui/material'; // Import useTheme
 import styles from './Navigation.module.scss';
 
-function Navigation({ top, navigation }) {
+function Navigation({ top, navigation, switches }) {
   const { t, i18n } = useTranslation();
+  const theme = useTheme();
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language');
@@ -21,16 +25,18 @@ function Navigation({ top, navigation }) {
   };
 
   return (
-    <div className={styles.nav}>
+    <Paper sx={{ color: theme.palette.background.secondary }}>
       <nav>
         <ul>
           {navigation.map((item) => (
             <div className={styles.icon_items} key={item.title}>
               <div className={styles.icon_item}>
-                {item.icon_dark}
+                {switches === 'dark' ? item.icon_dark : item.icon_light}
               </div>
               <Link to={item.routes} className={styles.nav_item} key={item.title}>
-                {t(`navigation.${item.title.toLowerCase()}`)}
+                <Typography sx={{ color: theme.palette.text.primary }}>
+                  {t(`navigation.${item.title.toLowerCase()}`)}
+                </Typography>
               </Link>
             </div>
           ))}
@@ -39,11 +45,23 @@ function Navigation({ top, navigation }) {
       </nav>
       <div>
         {top.map((item) => (
-          <p className={styles.top}>{t(`top.${item}`)}</p>
+          <Typography
+            className={styles.top}
+            sx={{
+              color: theme.palette.text.secondary,
+              margin: '20px 30px 18px 30px',
+            }}
+          >
+            {t(`top.${item}`)}
+          </Typography>
         ))}
       </div>
       <div className={styles.language}>
-        <MdOutlineLanguage className={styles.icon_lang} />
+        {switches === 'dark' ? (
+          <MdOutlineLanguage style={{ color: 'white', width: '24px', height: '24px' }} />
+        ) : (
+          <MdOutlineLanguage style={{ color: 'black', width: '24px', height: '24px' }} />
+        )}
         <select className={styles.select_lang} onChange={(e) => changeLanguage(e.target.value)}>
           <option value="en" selected={i18n.language === 'en'}>
             English
@@ -53,7 +71,7 @@ function Navigation({ top, navigation }) {
           </option>
         </select>
       </div>
-    </div>
+    </Paper>
   );
 }
 

@@ -2,6 +2,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 
 import React from 'react';
+import { ThemeProvider, createTheme } from '@mui/material';
 import Navigation from '../../Navigation/Navigation';
 import Main from '../../Main/Main';
 import FriendActivity from '../../FriendActivity/FriendActivity';
@@ -12,9 +13,8 @@ import './App.scss';
 
 // eslint-disable-next-line react/prop-types
 function App({ navigation, top, mix }) {
-  const switches = useSelector((state) => state.spotify.switches);
+  const { switches, open } = useSelector((state) => state.spotify);
   const dispatch = useDispatch();
-  const open = useSelector((state) => state.spotify.open);
 
   const handleSwitchChange = () => {
     const newSwitchValue = switches === 'dark' ? 'light' : 'dark';
@@ -25,19 +25,20 @@ function App({ navigation, top, mix }) {
     dispatch(toggleOpenClose(!open));
   };
 
+  const darkTheme = createTheme({
+    palette: {
+      mode: switches === 'dark' ? 'dark' : 'light',
+    },
+  });
+
   return (
-    open ? (
-      <div className="App">
+    <ThemeProvider theme={darkTheme}>
+      <div className={open ? 'App' : 'App_close'}>
         <Navigation top={top} navigation={navigation} switches={switches} />
         <Main toggleOpen={toggleOpen} open={open} mix={mix} switches={switches} handleSwitchChange={handleSwitchChange} navigation={navigation} />
-        <FriendActivity toggleOpen={toggleOpen} />
+        {open && <FriendActivity toggleOpen={toggleOpen} switches={switches} />}
       </div>
-    ) : (
-      <div className="App_close">
-        <Navigation top={top} navigation={navigation} switches={switches} />
-        <Main toggleOpen={toggleOpen} open={open} mix={mix} switches={switches} handleSwitchChange={handleSwitchChange} navigation={navigation} />
-      </div>
-    )
+    </ThemeProvider>
   );
 }
 

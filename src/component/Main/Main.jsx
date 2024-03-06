@@ -11,9 +11,10 @@ function Main({
   switches, handleSwitchChange, mix, open, toggleOpen,
 }) {
   const { t } = useTranslation();
+  const main = switches === 'dark' ? styles.main_dark : styles.main_light;
 
   return (
-    <div className={styles.main_dark}>
+    <div className={main}>
       <div className={styles.wrapper}>
         <HeaderMain
           switches={switches}

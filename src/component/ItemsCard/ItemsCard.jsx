@@ -2,17 +2,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Typography } from '@mui/material';
+import { useTheme } from '@emotion/react';
 import styles from './ItemsCard.module.scss';
 
 // eslint-disable-next-line react/prop-types
 function ItemsCard({ mix, title, open }) {
   const { t } = useTranslation();
+  const theme = useTheme();
 
   return (
     <>
       <div className={styles.top_mix}>
         <h2 className={styles.title_top_mix}>{t(`mix.${title}`)}</h2>
-        <p className={styles.all_top_mix}>{t('mix.SeeAll')}</p>
+        <Typography sx={{ color: theme.palette.text.secondary, fontSize: '16px' }}>{t('mix.SeeAll')}</Typography>
       </div>
       <div className={styles.items_top_mix}>
         {open
