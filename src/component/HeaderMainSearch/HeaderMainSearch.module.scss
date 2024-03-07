@@ -27,6 +27,11 @@
     align-items: center;
 }
 
+.arrow {
+    display: flex;
+    gap: 20px;
+}
+
 .auth_panel {
     display: flex;
     align-items: baseline;

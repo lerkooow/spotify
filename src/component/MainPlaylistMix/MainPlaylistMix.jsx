@@ -57,7 +57,7 @@ function MainPlaylistMix({
             <p className={styles.liked_text}>{t(`mix.${title}`)}</p>
             {mix.map((item) => (
               item.title === title ? (
-                <p className={styles.liked_description}>{item.description}</p>
+                <p className={styles.liked_description}>{t(`mix.${item.description}`)}</p>
               ) : null
             ))}
             <div className={styles.avatar_liked}>

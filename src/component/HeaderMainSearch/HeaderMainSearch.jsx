@@ -20,20 +20,20 @@ function HeaderMainSearch({
     <div>
       <header>
         <div className={styles.auth_dark}>
-          <Link to="/" className={styles.arrows}>
+          <div className={styles.arrows}>
             {switches === 'dark' ? (
-              <>
+              <Link to="/" className={styles.arrow}>
                 <IoIosArrowDropleftCircle style={{ color: 'white', width: '40px', height: '40px' }} />
                 <IoIosArrowDroprightCircle style={{ color: 'white', width: '40px', height: '40px' }} />
-              </>
+              </Link>
             ) : (
-              <>
+              <Link to="/" className={styles.arrow}>
                 <IoIosArrowDropleftCircle style={{ color: 'black', width: '40px', height: '40px' }} />
                 <IoIosArrowDroprightCircle style={{ color: 'black', width: '40px', height: '40px' }} />
-              </>
+              </Link>
             )}
             <SearchMUI />
-          </Link>
+          </div>
           <div className={styles.auth_panel}>
             <CustomizedSwitches switches={switches} handleSwitchChange={handleSwitchChange} />
             <Link to="/signup" className={styles.signup}>

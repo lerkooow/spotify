@@ -111,7 +111,7 @@ const mix = [
     id: 5,
     title: 'Daily Mix 2',
     img: mix5,
-    description: 'FRENSHIP, Brooke Sierra, Julia Wolf an...',
+    description: 'FRENSHIP, Brooke Sierra, Julia Wolf and...',
   },
   {
     id: 6,
