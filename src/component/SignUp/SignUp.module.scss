@@ -6,7 +6,6 @@
 .signup {
     display: grid;
     color: #fff;
-    background-color: #b3a4a44c;
     border-radius: 10px;
     justify-items: center;
     position: absolute;
@@ -46,22 +45,14 @@
     }
 
     .return_home {
-        color: #3333A3;
+        color: #1ed760;
         margin: 29px 650px 0 0;
         text-decoration: none;
-
-        &:hover {
-            color: #4d4df7;
-        }
     }
 
     .return_login {
-        color: #3333A3;
+        color: #bbc7cb;
         margin-bottom: 29px;
         text-decoration: none;
-
-        &:hover {
-            color: #4d4df7;
-        }
     }
 }

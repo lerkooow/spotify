@@ -14,7 +14,7 @@ function LogIn() {
         <TextField className={styles.input_name} label="name" />
         <TextField label="email" className={styles.input_email} />
         <Button sx={{
-          background: 'linear-gradient(45deg, #3333A3 50%, #fff 90%)',
+          background: '#1ed760',
           borderRadius: 3,
           border: 0,
           color: 'white',

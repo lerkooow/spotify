@@ -32,7 +32,7 @@ function HeaderMainSearch({
                 <IoIosArrowDroprightCircle style={{ color: 'black', width: '40px', height: '40px' }} />
               </Link>
             )}
-            <SearchMUI />
+            <SearchMUI switches={switches} />
           </div>
           <div className={styles.auth_panel}>
             <CustomizedSwitches switches={switches} handleSwitchChange={handleSwitchChange} />

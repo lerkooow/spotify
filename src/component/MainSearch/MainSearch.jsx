@@ -1,18 +1,19 @@
 /* eslint-disable max-len */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useRef } from 'react';
 import { IoCloseCircleOutline } from 'react-icons/io5';
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { useTheme } from '@emotion/react';
 import { useTranslation } from 'react-i18next';
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import HeaderMainSearch from '../HeaderMainSearch/HeaderMainSearch';
 
 import artist1 from '../../img/ab6761610000e5ebdb68d678df6d89bf8a55d052.jpeg';
 import artist2 from '../../img/ab67706f000000021d5bbda37b600608832909bc.jpeg';
 import slide1 from '../../img/Frame 46.png';
 import slide2 from '../../img/Frame 47.png';
-// import slide3 from "../../img/Frame 48.png";
-// import slide4 from "../../img/Frame 49.png";
+import slide3 from '../../img/Frame 48.png';
+import slide4 from '../../img/Frame 49.png';
 import styles from './MainSearch.module.scss';
 
 function MainSearch({
@@ -21,6 +22,20 @@ function MainSearch({
   const main = switches === 'dark' ? styles.main_dark : styles.main_light;
   const theme = useTheme();
   const { t } = useTranslation();
+
+  const sliderRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft -= 300;
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft += 300;
+    }
+  };
 
   return (
     <div className={main}>
@@ -78,11 +93,27 @@ function MainSearch({
         >
           {t('searches.yourTopGenres')}
         </Typography>
-        <div className={styles.slider}>
+        <div className={styles.slider} ref={sliderRef}>
           <img className={styles.img_slider} src={slide1} alt="slide1" />
           <img className={styles.img_slider} src={slide2} alt="slide2" />
-          {/* <img src={slide3} alt="slide3"/>
-                    <img src={slide4} alt="slide4"/> */}
+          <img className={styles.img_slider} src={slide3} alt="slide3" />
+          <img className={styles.img_slider} src={slide4} alt="slide4" />
+        </div>
+        <div className={styles.swipes}>
+          <Button onClick={scrollLeft} id="scrollLeftButton">
+            {switches === 'dark' ? (
+              <MdKeyboardArrowLeft style={{ color: 'white', width: '40px', height: '40px' }} />
+            ) : (
+              <MdKeyboardArrowLeft style={{ color: 'black', width: '40px', height: '40px' }} />
+            )}
+          </Button>
+          <Button onClick={scrollRight} id="scrollRightButton">
+            {switches === 'dark' ? (
+              <MdKeyboardArrowRight style={{ color: 'white', width: '40px', height: '40px' }} />
+            ) : (
+              <MdKeyboardArrowRight style={{ color: 'black', width: '40px', height: '40px' }} />
+            )}
+          </Button>
         </div>
         <Typography
           sx={{ color: theme.palette.text.primary, fontSize: '32px', margin: '55px 0 20px 0' }}

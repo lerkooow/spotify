@@ -38,12 +38,21 @@
 
 .slider {
     display: flex;
-    gap: 30px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
 
-    .img_slider {
-        width: 478px;
-        height: 270px;
-    }
+.img_slider {
+    width: 100%;
+    max-width: 478px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.swipes {
+    display: flex;
+    justify-content: center;
 }
 
 .browse_items {

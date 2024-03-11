@@ -35,9 +35,11 @@ function HeaderMain({
           </Link>
           <div className={styles.auth_panel}>
             <CustomizedSwitches switches={switches} handleSwitchChange={handleSwitchChange} />
-            <Typography style={{ color: theme.palette.text.primary }}>
-              {t('signup.SignUp')}
-            </Typography>
+            <Link to="/signup" className={styles.signup}>
+              <Typography style={{ color: theme.palette.text.primary }}>
+                {t('signup.SignUp')}
+              </Typography>
+            </Link>
             <Link to="/login" className={styles.login}>
               {t('login.LogIn')}
             </Link>
