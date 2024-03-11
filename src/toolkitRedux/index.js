@@ -2,11 +2,11 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import spotifyReducer from './spotifySlice';
 
 const rootReducer = combineReducers({
-    spotify: spotifyReducer,
+  spotify: spotifyReducer,
 });
 
 const store = configureStore({
-    reducer: rootReducer,
+  reducer: rootReducer,
 });
 
 export default store;

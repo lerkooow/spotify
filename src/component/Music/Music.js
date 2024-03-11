@@ -1,3 +1,4 @@
+/* eslint-disable import/no-duplicates */
 import logoMusic1 from '../../img/ImgLogoMusic/Screenshot 2022-06-04 at 20.05 (4).png';
 import logoMusic2 from '../../img/ImgLogoMusic/Screenshot 2022-06-04 at 20.05 (5).png';
 import logoMusic3 from '../../img/ImgLogoMusic/Screenshot 2022-06-04 at 20.05 (6).png';
