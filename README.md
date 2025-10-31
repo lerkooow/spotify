@@ -10,7 +10,7 @@ React, SCSS, Redux Toolkit, Emotion CSS, i18next, Create React App
 
 ## Ссылка на деплой проекта:
 
-
+https://master--site-spotify-music.netlify.app/
 
 ## Установка и запуск приложения:
 
